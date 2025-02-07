@@ -23,7 +23,7 @@ public class FirstSceneScript : MonoBehaviour
         dialogTexts.Add(new DialogData("/emote:Sorpresa/¡Vaya! /wait:0.1//emote:Normal/Sabes que justo eso es algo que también creo yo.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Happy/Bueno, ya tenemos algo en común.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Happy/¡Definitivamente! /wait:0.1//emote:Normal/Y ya que preguntas sobre eso Dante, te tengo un pequeño juego. ¿Te animas a completarlo?.", "Kidmand"));
-        dialogTexts.Add(new DialogData("/emote:Sorpresa/¡Oh, un juego!... /wait:0.1//emote:Normal/¿De que se trataría?.", "Dante"));
+        dialogTexts.Add(new DialogData("/emote:Sorpresa/¡Oh, un juego!... /wait:0.1//emote:Normal/¿De qué se trata?.", "Dante"));
         dialogTexts.Add(new DialogData("/size:down/Te haré una pregunta sobre una frase referida al desarrollo personal y te daré tres opciones para elegir la correcta, ¿De Acuerdo?.", "Kidmand"));
         dialogTexts.Add(new DialogData("/emote:Happy/Si, me encanta. Adelante, estoy listo.", "Dante"));
 
@@ -70,6 +70,10 @@ public class FirstSceneScript : MonoBehaviour
         }
 
         dialogTexts.Add(new DialogData("/emote:Happy/Me alegra que hayas dicho eso.", "Kidmand"));
+        dialogTexts.Add(new DialogData("/emote:Happy/Bien, me alegra haberte conocido Kidmand. /wait:0.1//emote:Normal/Si me permites me iré a mi cuarto.", "Dante"));
+        dialogTexts.Add(new DialogData("/emote:Happy/¡Claro Dante! /wait:0.1//emote:Normal/Espero verte pronto.", "Kidmand"));
+        dialogTexts.Add(new DialogData("/emote:Happy/¡Hasta luego!", "Dante"));
+        dialogTexts.Add(new DialogData("Presiona escape para ir al cuarto de Dante"));
 
         DialogManager.Show(dialogTexts);
     }
