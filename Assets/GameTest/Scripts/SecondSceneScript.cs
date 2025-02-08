@@ -12,15 +12,33 @@ public class SecondSceneScript : MonoBehaviour
     {
         var dialogTexts = new List<DialogData>();
 
-        dialogTexts.Add(new DialogData("Here you can create any mini-game you can think of and make me react to it", "Li"));
+        dialogTexts.Add(new DialogData("/size:down/Bueno, ahora estamos en mi cuarto y quiero relajarme pero no se que hacer. Voy a pensar en algunas opciones.", "Dante"));
 
-        dialogTexts.Add(new DialogData("I doesn't have to be complex nor long, just some short and simple stuff.", "Li"));        
+        // Añadir opciones de selección. 
+        var selectionText = new DialogData("Creo que estoy entre dos cosas que me harían relajarme bastante.", "Dante");
+        selectionText.SelectList.Add("Naturaleza","Tengo ganas de sentir aire fresco, quizá pueda ir al parque.");
+        selectionText.SelectList.Add("Juego","Tengo muchas ganas de jugar videojuegos, ya que estoy en mi cuarto.");
+        selectionText.Callback = () => HandleSelection();
+        dialogTexts.Add(selectionText);
+  
+        
+        DialogManager.Show(dialogTexts);
+    }
 
-        dialogTexts.Add(new DialogData("Use my sprite, leave me on a side of the screen, make a few animations", "Li"));
+    private void HandleSelection()
+    {
+        var dialogTexts = new List<DialogData>();
 
-        dialogTexts.Add(new DialogData("And depending the actions of the mini-game change mi animation state, move me or do whatever crazy stuff you can think of!", "Li"));
-
-        dialogTexts.Add(new DialogData("After the player finishes the game, make me say something and move to the ThirdScene.", "Li"));
+        if (DialogManager.Result == "Naturaleza")
+        {
+            dialogTexts.Add(new DialogData("/emote:Happy/¡Gracias por la idea! /wait:0.1//emote:Normal/Me iré al parque a disfrutar de la naturaleza.", "Dante"));
+            dialogTexts.Add(new DialogData("Presiona space para ir al parque."));
+        }
+        else if (DialogManager.Result == "Juego")
+        {
+            dialogTexts.Add(new DialogData("/emote:Happy/¡Gracias por la idea! /wait:0.1//emote:Normal/Me quedaré en mi cuarto a disfrutar de los videojuegos.", "Dante"));
+            dialogTexts.Add(new DialogData("Presiona la letra Q para jugar videojuegos."));
+        }
         
         DialogManager.Show(dialogTexts);
     }

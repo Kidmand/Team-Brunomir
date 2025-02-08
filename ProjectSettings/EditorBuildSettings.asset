@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/GameTest/Scenes/ThirdScene.unity
     guid: a4e1eec9befed6e4eb9e85f8c0f59655
   - enabled: 1
-    path: Assets/DDSystem/Demo/Demo.unity
-    guid: 2ee905b7a480ead4caaece7733a17acf
+    path: Assets/GameTest/Scenes/FourthScene.unity
+    guid: 77242c795d2ec17aabca1cd8d3638437
   m_configObjects: {}

@@ -47,7 +47,7 @@ public class FirstSceneScript : MonoBehaviour
         dialogTexts.Add(new DialogData("/emote:Happy/Bien, me alegra haberte conocido Kidmand. /wait:0.1//emote:Normal/Si me permites me iré a mi cuarto.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Happy/¡Claro Dante! /wait:0.1//emote:Normal/Espero verte pronto.", "Kidmand"));
         dialogTexts.Add(new DialogData("/emote:Happy/¡Hasta luego!", "Dante"));
-        dialogTexts.Add(new DialogData("Presiona escape para ir al cuarto de Dante"));
+        dialogTexts.Add(new DialogData("Presiona space para ir al cuarto de Dante"));
     }
 
     // Manejar la selección del jugador, y seguir pequeños diálogos entre los personajes. 
