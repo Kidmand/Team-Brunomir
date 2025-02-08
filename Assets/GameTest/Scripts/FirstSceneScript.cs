@@ -15,6 +15,7 @@ public class FirstSceneScript : MonoBehaviour
         DialogManager.Show(dialogTexts);
     }
 
+    // Diálogos entre los personajes Dante y Kidmand.
     private void AddInitialDialogues(List<DialogData> dialogTexts)
     {
         dialogTexts.Add(new DialogData("/emote:Happy/¡Hola, /size:init/mi nombre es Dante!.", "Dante"));
