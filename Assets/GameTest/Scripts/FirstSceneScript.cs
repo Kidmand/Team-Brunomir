@@ -10,8 +10,13 @@ public class FirstSceneScript : MonoBehaviour
     private void Awake()
     {
         var dialogTexts = new List<DialogData>();
-        
-        // Diálogos entre los personajes y uso de emociones y reacciones en los sprites.
+        AddInitialDialogues(dialogTexts);
+        AddSelectionDialogues(dialogTexts);
+        DialogManager.Show(dialogTexts);
+    }
+
+    private void AddInitialDialogues(List<DialogData> dialogTexts)
+    {
         dialogTexts.Add(new DialogData("/emote:Happy/¡Hola, /size:init/mi nombre es Dante!.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Happy/Hola Dante, yo soy Kidmand. ¡Encantado de conocerte!", "Kidmand"));
         dialogTexts.Add(new DialogData("/emote:Happy/ El placer es mío.", "Dante"));
@@ -26,9 +31,10 @@ public class FirstSceneScript : MonoBehaviour
         dialogTexts.Add(new DialogData("/emote:Sorpresa/¡Oh, un juego!... /wait:0.1//emote:Normal/¿De qué se trata?.", "Dante"));
         dialogTexts.Add(new DialogData("/size:down/Te haré una pregunta sobre una frase referida al desarrollo personal y te daré tres opciones para elegir la correcta, ¿De Acuerdo?.", "Kidmand"));
         dialogTexts.Add(new DialogData("/emote:Happy/Si, me encanta. Adelante, estoy listo.", "Dante"));
+    }
 
-
-        // Añadir opciones de selección. 
+    private void AddSelectionDialogues(List<DialogData> dialogTexts)
+    {
         var selectionText = new DialogData("/size:down/Bueno, veamos si conoces a un famoso líder de desarrollo personal llamado Brian Tracy. En unos de sus maravillosos cursos (El seminario Fénix) dice una frase, ¿La cúal sería?:", "Kidmand");
         selectionText.SelectList.Add("Correct","Jamás, jamás, jamás se den por vencidos.");
         selectionText.SelectList.Add("Incorrect1","Lo que la mente del hombre puede concebir y creer, puede lograrse.");
@@ -36,11 +42,14 @@ public class FirstSceneScript : MonoBehaviour
         selectionText.Callback = () => HandleSelection();
         dialogTexts.Add(selectionText);
 
-        DialogManager.Show(dialogTexts);
+        dialogTexts.Add(new DialogData("/emote:Happy/Me alegra que hayas dicho eso.", "Kidmand"));
+        dialogTexts.Add(new DialogData("/emote:Happy/Bien, me alegra haberte conocido Kidmand. /wait:0.1//emote:Normal/Si me permites me iré a mi cuarto.", "Dante"));
+        dialogTexts.Add(new DialogData("/emote:Happy/¡Claro Dante! /wait:0.1//emote:Normal/Espero verte pronto.", "Kidmand"));
+        dialogTexts.Add(new DialogData("/emote:Happy/¡Hasta luego!", "Dante"));
+        dialogTexts.Add(new DialogData("Presiona escape para ir al cuarto de Dante"));
     }
 
-
-        // Manejar la selección del jugador, y seguir pequeños diálogos entre los personajes. 
+    // Manejar la selección del jugador, y seguir pequeños diálogos entre los personajes. 
     private void HandleSelection()
     {
         var dialogTexts = new List<DialogData>();
@@ -61,19 +70,12 @@ public class FirstSceneScript : MonoBehaviour
             dialogTexts.Add(new DialogData("/emote:Sad/Supongo que tendré que seguir aprendiendo más.", "Dante"));
         }
 
-
         // En caso de que la respuesta sea incorrecta.    
         if (DialogManager.Result != "Correct")
         { 
             dialogTexts.Add(new DialogData("Vamos, no te desanimes. Tampoco se pueden saber todas las frases del mundo.", "Kidmand"));
             dialogTexts.Add(new DialogData("/emote:Happy/Tienes razon, de igual manera gracias por el juego. Me dieron más ganas de aprender y mejorar.", "Dante"));
         }
-
-        dialogTexts.Add(new DialogData("/emote:Happy/Me alegra que hayas dicho eso.", "Kidmand"));
-        dialogTexts.Add(new DialogData("/emote:Happy/Bien, me alegra haberte conocido Kidmand. /wait:0.1//emote:Normal/Si me permites me iré a mi cuarto.", "Dante"));
-        dialogTexts.Add(new DialogData("/emote:Happy/¡Claro Dante! /wait:0.1//emote:Normal/Espero verte pronto.", "Kidmand"));
-        dialogTexts.Add(new DialogData("/emote:Happy/¡Hasta luego!", "Dante"));
-        dialogTexts.Add(new DialogData("Presiona escape para ir al cuarto de Dante"));
 
         DialogManager.Show(dialogTexts);
     }
