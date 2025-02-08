@@ -43,6 +43,7 @@ public class FirstSceneScript : MonoBehaviour
         selectionText.Callback = () => HandleSelection();
         dialogTexts.Add(selectionText);
 
+        // Diálogos finales que se muestran al finalizar el juego de selección, indistinto de la elección que se haya hecho.
         dialogTexts.Add(new DialogData("/emote:Happy/Me alegra que hayas dicho eso.", "Kidmand"));
         dialogTexts.Add(new DialogData("/emote:Happy/Bien, me alegra haberte conocido Kidmand. /wait:0.1//emote:Normal/Si me permites me iré a mi cuarto.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Happy/¡Claro Dante! /wait:0.1//emote:Normal/Espero verte pronto.", "Kidmand"));
