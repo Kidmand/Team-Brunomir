@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogManager: {fileID: 325689816}
+  cambiarEscenaScript: {fileID: 823256108}
 --- !u!1 &76003758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,6 +1477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indiceEscena: 1
   teclaCambio: 32
+  cambiarEscena: 0
 --- !u!4 &823256109
 Transform:
   m_ObjectHideFlags: 0

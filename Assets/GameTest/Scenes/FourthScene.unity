@@ -2132,7 +2132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indiceEscena: 1
-  teclaCambio: 32
+  teclaCambio: 0
 --- !u!4 &2064665393
 Transform:
   m_ObjectHideFlags: 0

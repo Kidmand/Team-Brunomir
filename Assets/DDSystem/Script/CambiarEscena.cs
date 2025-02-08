@@ -5,10 +5,11 @@ public class CambiarEscena : MonoBehaviour
 {
     public int indiceEscena;
     public KeyCode teclaCambio = KeyCode.Space;
+    /*public bool cambiarEscena = false;*/
 
     void Update()
     {
-        if (Input.GetKeyDown(teclaCambio))
+        if (Input.GetKeyDown(teclaCambio) /*|| cambiarEscena*/)
         {
             if (indiceEscena >= 0)
             {
@@ -21,3 +22,5 @@ public class CambiarEscena : MonoBehaviour
         }
     }
 }
+
+// Lo que está entre /*---*/ puede representar una mejora en el juego quizá al automatizar el cambio de escena. 
