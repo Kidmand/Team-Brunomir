@@ -17,7 +17,7 @@ public class SixthSceneScript : MonoBehaviour
         dialogTexts.Add(new DialogData("/emote:Normal/También se sabe que el esposo le pidió al otro hombre que fuere lo que fuere no dejara a sus hijos desprotegidos.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Pensativa/¿Hay algo raro en esto, por qué solo los niños? ¿Qué hay de la esposa?." , "Dafne"));
         dialogTexts.Add(new DialogData("/emote:Normal/De hecho, eso mismo se preguntaba el residente que escuchó la conversación.", "Dante"));
-        dialogTexts.Add(new DialogData("/emote:Normal/.Hay muchas supersticiones al respecto de eso. Muchos dicen que el hombre trataba de cuidar a los niños de la mujer.", "Dante"));
+        dialogTexts.Add(new DialogData("/emote:Normal/Hay muchas supersticiones al respecto de eso. Muchos dicen que el hombre trataba de cuidar a los niños de la mujer.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Pensativa/¿No se sabe que artilugio buscaba el esposo?.", "Dafne"));
         dialogTexts.Add(new DialogData("/emote:Normal/No, pero luego me centro en eso. Por lo pronto te sigo narrando la historia.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/Está bien, /wait:0.1//emote:Pensativa/muy interesante hasta ahora.", "Dafne"));
