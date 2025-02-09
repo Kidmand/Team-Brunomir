@@ -2003,7 +2003,7 @@ GameObject:
   - component: {fileID: 1769945777}
   - component: {fileID: 1769945776}
   m_Layer: 0
-  m_Name: CambiarEscena
+  m_Name: ChangeScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2018,11 +2018,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1769945775}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0df5f2b3dbb6c0f6dad0a9ceab716158, type: 3}
+  m_Script: {fileID: 11500000, guid: 3037f14b00e203565889b03ce7618993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indiceEscena: 8
-  teclaCambio: 32
+  indexScene: 8
+  keyCode: 32
+  changeScene: 0
 --- !u!4 &1769945777
 Transform:
   m_ObjectHideFlags: 0

@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogManager: {fileID: 325689816}
-  cambiarEscenaScript: {fileID: 823256108}
+  ChangeSceneScript: {fileID: 823256108}
 --- !u!1 &76003758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,7 +1457,7 @@ GameObject:
   - component: {fileID: 823256109}
   - component: {fileID: 823256108}
   m_Layer: 0
-  m_Name: CambiarEscena
+  m_Name: ChangeScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1472,12 +1472,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 823256107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0df5f2b3dbb6c0f6dad0a9ceab716158, type: 3}
+  m_Script: {fileID: 11500000, guid: 3037f14b00e203565889b03ce7618993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indiceEscena: 1
-  teclaCambio: 32
-  cambiarEscena: 0
+  indexScene: 1
+  keyCode: 32
+  changeScene: 0
 --- !u!4 &823256109
 Transform:
   m_ObjectHideFlags: 0

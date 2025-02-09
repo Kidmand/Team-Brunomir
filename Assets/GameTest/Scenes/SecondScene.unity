@@ -855,7 +855,7 @@ GameObject:
   - component: {fileID: 984745445}
   - component: {fileID: 984745444}
   m_Layer: 0
-  m_Name: CambiarEscena
+  m_Name: ChangeScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -870,11 +870,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 984745443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0df5f2b3dbb6c0f6dad0a9ceab716158, type: 3}
+  m_Script: {fileID: 11500000, guid: 3037f14b00e203565889b03ce7618993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indiceEscena: 2
-  teclaCambio: 32
+  indexScene: 2
+  keyCode: 32
+  changeScene: 0
 --- !u!4 &984745445
 Transform:
   m_ObjectHideFlags: 0
@@ -2745,7 +2746,7 @@ GameObject:
   - component: {fileID: 2106722969}
   - component: {fileID: 2106722968}
   m_Layer: 0
-  m_Name: CambiarEscenaVideojuegos
+  m_Name: ChangeSceneVideogame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2760,11 +2761,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2106722967}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0df5f2b3dbb6c0f6dad0a9ceab716158, type: 3}
+  m_Script: {fileID: 11500000, guid: 3037f14b00e203565889b03ce7618993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indiceEscena: 3
-  teclaCambio: 113
+  indexScene: 3
+  keyCode: 113
+  changeScene: 0
 --- !u!4 &2106722969
 Transform:
   m_ObjectHideFlags: 0

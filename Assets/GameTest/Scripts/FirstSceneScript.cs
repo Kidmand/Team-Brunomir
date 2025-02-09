@@ -6,6 +6,7 @@ using Doublsb.Dialog;
 public class FirstSceneScript : MonoBehaviour
 {
     public DialogManager DialogManager;
+    public ChangeScene ChangeSceneScript;
 
     private void Awake()
     {
@@ -13,6 +14,7 @@ public class FirstSceneScript : MonoBehaviour
         AddInitialDialogues(dialogTexts);
         AddSelectionDialogues(dialogTexts);
         DialogManager.Show(dialogTexts);
+        StartCoroutine(WaitAndChangeScene());
     }
 
     // Diálogos entre los personajes Dante y Kidmand en el living de la residencia/pensión.
@@ -20,7 +22,7 @@ public class FirstSceneScript : MonoBehaviour
     {
         dialogTexts.Add(new DialogData("/emote:Happy/¡Hola, /size:init/mi nombre es Dante!.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Happy/Hola Dante, yo soy Kidmand. ¡Encantado de conocerte!", "Kidmand"));
-        dialogTexts.Add(new DialogData("/emote:Happy/ El placer es mío.", "Dante"));
+        dialogTexts.Add(new DialogData("/emote:Happy/El placer es mío.", "Dante"));
         dialogTexts.Add(new DialogData("Hay algo de lo que quiero hablarte Kidmand, quizá te resulte anormal pero considero que es muy importante saberlo.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Sorpresa/¡Oh, por supuesto Dante!/wait:0.1//emote:Happy/ Estoy curioso de saber de que se trata, dime. ", "Kidmand"));
         dialogTexts.Add(new DialogData("¿Tú consideras que el desarrollo personal es algo importante en nuestras vidas?.", "Dante"));
@@ -48,7 +50,6 @@ public class FirstSceneScript : MonoBehaviour
         dialogTexts.Add(new DialogData("/emote:Happy/Bien, me alegra haberte conocido Kidmand. /wait:0.1//emote:Normal/Si me permites me iré a mi cuarto.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Happy/¡Claro Dante! /wait:0.1//emote:Normal/Espero verte pronto.", "Kidmand"));
         dialogTexts.Add(new DialogData("/emote:Happy/¡Hasta luego!", "Dante"));
-        dialogTexts.Add(new DialogData("Presiona space para ir al cuarto de Dante.","Dante"));
     }
 
     // Manejar la selección del jugador, y seguir pequeños diálogos entre los personajes. 
@@ -58,8 +59,8 @@ public class FirstSceneScript : MonoBehaviour
 
         if (DialogManager.Result == "Correct")
         {
-            dialogTexts.Add(new DialogData("/emote:Sorpresa/ ¡Oh, felicitaciones!/wait:0.1//emote:Happy/ Tienes una excelente memoria al recordar la frase correctamente o tiene suerte por haber adivinado ;).", "Kidmand"));
-            dialogTexts.Add(new DialogData("/emote:Happy/ ¡Muchas Gracias! /wait:0.1//emote:Normal/Sí, vi el seminario fénix, me pareció extraodinario.", "Dante"));
+            dialogTexts.Add(new DialogData("/emote:Sorpresa/¡Oh, felicitaciones!/wait:0.1//emote:Happy/ Tienes una excelente memoria al recordar la frase correctamente o tiene suerte por haber adivinado ;).", "Kidmand"));
+            dialogTexts.Add(new DialogData("/emote:Happy/¡Muchas Gracias! /wait:0.1//emote:Normal/Sí, vi el seminario fénix, me pareció extraodinario.", "Dante"));
         }
         else if (DialogManager.Result == "Incorrect1")
         {
@@ -80,6 +81,18 @@ public class FirstSceneScript : MonoBehaviour
         }
 
         DialogManager.Show(dialogTexts);
+    }
+
+        private IEnumerator WaitAndChangeScene()
+    {
+        // Esperar a que todos los diálogos terminen.
+        while (DialogManager.state != State.Deactivate)
+        {
+            yield return null;
+        }
+
+        // Activar el cambio de escena.
+        ChangeSceneScript.changeScene = true;
     }
 }
 
