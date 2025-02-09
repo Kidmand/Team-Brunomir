@@ -21,7 +21,7 @@ public class SixthSceneScript : MonoBehaviour
         dialogTexts.Add(new DialogData("/emote:Pensativa/¿No se sabe que artilugio buscaba el esposo?.", "Dafne"));
         dialogTexts.Add(new DialogData("/emote:Normal/No, pero luego me centro en eso. Por lo pronto te sigo narrando la historia.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/Está bien, /wait:0.1//emote:Pensativa/muy interesante hasta ahora.", "Dafne"));
-        dialogTexts.Add(new DialogData("/emote:Normal/Luego que el esposo se haya ido a Egipto, las cosas parecían normales. Hasta que un día, un residente escuchó de madrugada que alguien gritaba en el bosque, se trataba de un grito fememino.", "Dante"));
+        dialogTexts.Add(new DialogData("/size:down//emote:Normal/Luego que el esposo se haya ido a Egipto, las cosas parecían normales. Hasta que un día, un residente escuchó de madrugada que alguien gritaba en el bosque, se trataba de un grito fememino.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/El hombre no se atrevió a ver que era lo que sucedía, según sus palabras, el grito era aterrador...", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/Fue al bar que estaba cerca de su casa y les contó lo que había escuchado. De inmediato todos los hombres partieron hacia el bosque armados de antorchas, palos, cuchillos y escopetas.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/Cuando llegaron al lugar en dónde se pretendía que había ocurrido el grito, se encontró un ciervo destrozado entero.", "Dante"));

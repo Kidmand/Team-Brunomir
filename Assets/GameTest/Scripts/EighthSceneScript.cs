@@ -21,7 +21,7 @@ public class EighthSceneScript : MonoBehaviour
         dialogTexts.Add(new DialogData("/emote:Sorpresa/¡Ohh Dante! Esa historia es terrorífica, además nunca se supo lo que pasó lo que hace que la historia sea aún más terrorífica.", "Dafne"));
         dialogTexts.Add(new DialogData("/emote:Normal/Lo sé Dafne. Esta casa que estamos viendo ahora perteneció a aquella familia. Como vez, hace 10 años fue clausurada y desde entonces nadie ha entrado en ella.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Sorpresa/¡Dios mío!. /wait:0.1/Esta casa es tan grande y luce tan espeluznante.", "Dafne"));
-        dialogTexts.Add(new DialogData("/emote:Normal/Si, lo es. Siempre he querido entrar en ella y descubrir que fue lo que pasó. Estoy seguro que esa casa debe tener un cuarto secreto en donde existe un pazadizo hacia algún lugar en el bosque.", "Dante"));
+        dialogTexts.Add(new DialogData("/size:down//emote:Normal/Si, lo es. Siempre he querido entrar en ella y descubrir que fue lo que pasó. Estoy seguro que esa casa debe tener un cuarto secreto en donde existe un pazadizo hacia algún lugar en el bosque.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Sorpresa/¿Por qué dices eso?", "Dafne"));
         dialogTexts.Add(new DialogData("/emote:Normal/Estoy muy seguro que aquella familia tuvo mucho que ver con la muerte de su hijo.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Pensativa/Si, sabes que yo pienso lo mismo que tu. ¿Te animarías a entrar conmigo?", "Dafne"));
