@@ -5,8 +5,8 @@ using Doublsb.Dialog;
 
 public class SecondSceneScript : MonoBehaviour
 {
-
     public DialogManager DialogManager;
+    public ChangeScene ChangeSceneScript, ChangeSceneScript2;
 
     private void Awake()
     {
@@ -16,13 +16,13 @@ public class SecondSceneScript : MonoBehaviour
 
         // Añadir opciones de selección. 
         var selectionText = new DialogData("Creo que estoy entre dos cosas que me harían relajarme bastante.", "Dante");
-        selectionText.SelectList.Add("Naturaleza","Tengo ganas de sentir aire fresco, quizá pueda ir al parque.");
-        selectionText.SelectList.Add("Juego","Tengo muchas ganas de jugar videojuegos, ya que estoy en mi cuarto.");
+        selectionText.SelectList.Add("Naturaleza", "Tengo ganas de sentir aire fresco, quizá pueda ir al parque.");
+        selectionText.SelectList.Add("Juego", "Tengo muchas ganas de jugar videojuegos, ya que estoy en mi cuarto.");
         selectionText.Callback = () => HandleSelection();
         dialogTexts.Add(selectionText);
-  
-        
+
         DialogManager.Show(dialogTexts);
+
     }
 
     private void HandleSelection()
@@ -32,14 +32,15 @@ public class SecondSceneScript : MonoBehaviour
         if (DialogManager.Result == "Naturaleza")
         {
             dialogTexts.Add(new DialogData("/emote:Happy/¡Gracias por la idea! /wait:0.1//emote:Normal/Me iré al parque a disfrutar de la naturaleza.", "Dante"));
-            dialogTexts.Add(new DialogData("Presiona space para ir al parque.", "Dante"));
+            DialogManager.Show(dialogTexts);
+            StartCoroutine(SceneChanger.WaitAndChangeScene(DialogManager, ChangeSceneScript));
+            
         }
         else if (DialogManager.Result == "Juego")
         {
             dialogTexts.Add(new DialogData("/emote:Happy/¡Gracias por la idea! /wait:0.1//emote:Normal/Me quedaré en mi cuarto a disfrutar de los videojuegos.", "Dante"));
-            dialogTexts.Add(new DialogData("Presiona la letra Q para jugar videojuegos.", "Dante"));
+            DialogManager.Show(dialogTexts);
+            StartCoroutine(SceneChanger.WaitAndChangeScene(DialogManager, ChangeSceneScript2));
         }
-        
-        DialogManager.Show(dialogTexts);
     }
 }

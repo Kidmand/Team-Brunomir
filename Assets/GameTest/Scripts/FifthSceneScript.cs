@@ -19,7 +19,7 @@ public class FifthSceneScript : MonoBehaviour
         dialogTexts.Add(new DialogData("/emote:Sonrojada/Si, gracias por invitarme.", "Dafne"));
         dialogTexts.Add(new DialogData("/size:down//emote:Normal/La historia que te voy a contar es algo real que sucedió en una casa que se encuentra en este bosque. Algo que hasta la fecha nadie sabe bien que pasó. ", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Sorpresa/¡Ohh, eso hace que se me erice la piel! /emote:Pensativa/¿Qué fue lo que sucedió?.", "Dafne"));
-        dialogTexts.Add(new DialogData("/size:down//emote:Normal/Todo pasó una noche de inviero hace aproximadamente 10 años atrás. En la casa vivía una familia pudiente de mucho dinero, no se relacionaban mucho con la gente de por aquí.", "Dante"));
+        dialogTexts.Add(new DialogData("/size:down//emote:Normal/Todo pasó una noche de invierno hace aproximadamente 10 años atrás. En la casa vivía una familia pudiente de mucho dinero, no se relacionaban mucho con la gente de por aquí.", "Dante"));
         dialogTexts.Add(new DialogData("/size:down//emote:Normal/En general, las personas los tenían como una familia extraña. Si bien eran amables las veces que hablaban con alguien de la ciudad, todas las personas que hablaron con ellos solían sentirse extrañamente en alerta.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/Como si algo les advirtiera de algún peligro, quizá el propio instinto de supervivencia.", "Dante"));
         dialogTexts.Add(new DialogData("/size:down//emote:Pensativa/Eso que mencionas es algo que siempre me dió miedo. Porque es cierto que hay personas que aunque uno no sepa porqué, pero el cuerpo nos avisa de que hay algo mal con ellos.", "Dafne"));
@@ -36,19 +36,7 @@ public class FifthSceneScript : MonoBehaviour
 
         DialogManager.Show(dialogTexts);
 
-        StartCoroutine(WaitAndChangeScene());
+        StartCoroutine(SceneChanger.WaitAndChangeScene(DialogManager, ChangeSceneScript));
 
-    }
-
-    private IEnumerator WaitAndChangeScene()
-    {
-        // Esperar a que todos los diálogos terminen.
-        while (DialogManager.state != State.Deactivate)
-        {
-            yield return null;
-        }
-
-        // Activar el cambio de escena.
-        ChangeSceneScript.changeScene = true;
     }
 }

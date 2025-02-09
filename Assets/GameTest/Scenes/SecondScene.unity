@@ -434,6 +434,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogManager: {fileID: 1614500824}
+  ChangeSceneScript: {fileID: 984745444}
+  ChangeSceneScript2: {fileID: 2106722968}
 --- !u!1 &668131674
 GameObject:
   m_ObjectHideFlags: 0

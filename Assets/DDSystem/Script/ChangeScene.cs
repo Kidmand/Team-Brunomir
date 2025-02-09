@@ -11,14 +11,19 @@ public class ChangeScene : MonoBehaviour
     {
         if (Input.GetKeyDown(keyCode) || changeScene)
         {
-            if (indexScene >= 0)
-            {
-                SceneManager.LoadScene(indexScene);
-            }
-            else
-            {
-                Debug.LogError("Scene index is invalid!");
-            }
+            ChangeSceneByIndex(indexScene);
+        }
+    }
+
+    public static void ChangeSceneByIndex(int index)
+    {
+        if (index >= 0)
+        {
+            SceneManager.LoadScene(index);
+        }
+        else
+        {
+            Debug.LogError("Scene index is invalid!");
         }
     }
 }
