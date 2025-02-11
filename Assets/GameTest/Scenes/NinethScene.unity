@@ -1300,7 +1300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogManager: {fileID: 1986902513}
-  ChangeSceneScript: {fileID: 0}
+  ChangeSceneScript: {fileID: 142882264}
 --- !u!4 &1043011435
 Transform:
   m_ObjectHideFlags: 0
