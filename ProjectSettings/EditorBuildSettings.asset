@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/GameTest/Scenes/ThirdScene.unity
     guid: a4e1eec9befed6e4eb9e85f8c0f59655
   - enabled: 1
-    path: Assets/GameTest/Scenes/FourthScene.unity
-    guid: 77242c795d2ec17aabca1cd8d3638437
+    path: Assets/GameTest/Scenes/FourthSceneScript.unity
+    guid: c0f1785c4604ef0e3bba8e48c812f234
   - enabled: 1
     path: Assets/GameTest/Scenes/FifthScene.unity
     guid: 996fe3be9b7d96cde9130cf7b551831c

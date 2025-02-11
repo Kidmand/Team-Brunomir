@@ -35,7 +35,7 @@ public class SeventhSceneScript : MonoBehaviour
         dialogTexts.Add(new DialogData("/emote:Pensativa/No te preocupes, soy sensible para estas cosas pero estoy bien. ¿Qué pasó después?. ", "Dafne"));
         dialogTexts.Add(new DialogData("/emote:Normal/Se hizo una investigación muy profunda por toda la ciudad y sobre todo a la familia en cuestión.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/La mujer se volvió loca a los pocos días de la muerte de su hijo. Prácticamente no se despegaba de su otra hija, la niña.", "Dante"));
-        dialogTexts.Add(new DialogData("/size:down/emote:Normal/Los días pasaron y no encontraban nada, excepto un artilugio que parecía ser una esfinge. Según arqueólogos, dijeron que la esfinge tenía aproximadamente 2000 años y que era procedente de Egipto.","Dante"));
+        dialogTexts.Add(new DialogData("/size:down//emote:Normal/Los días pasaron y no encontraban nada, excepto un artilugio que parecía ser una esfinge. Según arqueólogos, dijeron que la esfinge tenía aproximadamente 2000 años y que era procedente de Egipto.","Dante"));
         dialogTexts.Add(new DialogData("/emote:Sorpresa/¡QUEE, EL PADRE!, ¿Pe, pero cómo?. Si él estaba en Egipto.", "Dafne"));  
         dialogTexts.Add(new DialogData("/emote:Normal/Si, el padre se encontraba aún en Egipto cuando ocurrió. Por eso la policía lo descartó como sospechoso.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/Pero muchos sospechan que él volvió mucho antes de que ocurriera el segundo suceso.", "Dante"));
