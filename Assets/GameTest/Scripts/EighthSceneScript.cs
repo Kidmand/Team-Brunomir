@@ -30,10 +30,20 @@ public class EighthSceneScript : MonoBehaviour
         dialogTexts.Add(new DialogData("/emote:Normal/Mmmmmmm. /wait:0.1//emote:Happy/Está bien, entremos.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal//speed:down/Esta historia continurá.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/Muchas gracias al equipo de TeamBrunomir por darme esta oportunidad. Les mando un enorme saludo.", "Dante"));
+        dialogTexts.Add(new DialogData("/emote:Normal/Presiona la letra (Q) para salir del juego.", "Dante"));
 
         DialogManager.Show(dialogTexts);
 
         StartCoroutine(WaitAndChangeScene.WaitDialog(DialogManager, ChangeSceneScript));
+    }
+
+    private void Update()
+    {
+        // Salir del juego al presionar la tecla Q.
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Application.Quit();
+        }
     }
 }
 

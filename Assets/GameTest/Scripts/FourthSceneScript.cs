@@ -50,7 +50,7 @@ public class FourthSceneScript : MonoBehaviour
         // Nuevos diálogos cuando matamos al niño.
         deathDialogTexts.Add(new DialogData("/emote:Sorpresa/¡Que manera más brutal de matar a ese niño! Justo esto era a lo que me refería con sangriento.", "Dante"));
         deathDialogTexts.Add(new DialogData("/emote:Normal/¡Genial! Y ahora dejó de andar. Pero que juego de porquería...", "Dante"));
-        deathDialogTexts.Add(new DialogData("/size:down//emote:Normal/MMMMMMMMMM./wait:01//emote:Sorpresa/Ahora que lo recuerdo, aquella vez que lo jugué había matado a un ciervo y a un niño. En fin, este juego siempre me va a parecer extraño.", "Dante"));
+        deathDialogTexts.Add(new DialogData("/size:down//emote:Normal/MMMMMMMMMM. /wait:01//emote:Sorpresa/Ahora que lo recuerdo, aquella vez que lo jugué había matado a un ciervo y a un niño. En fin, este juego siempre me va a parecer extraño.", "Dante"));
         deathDialogTexts.Add(new DialogData("/emote:Normal/Mejor tomo una siesta y descanso un rato, luego invitaré a Kidmand si quiere acompañarme al parque.", "Dante")); 
 
         DialogManager.Show(deathDialogTexts);

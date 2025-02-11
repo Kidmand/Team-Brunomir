@@ -21,10 +21,20 @@ public class NinethSceneScript : MonoBehaviour
         dialogTexts.Add(new DialogData("/emote:Normal/Mataron a un niño en el bosque hace unas horas.", "Kidmand"));
         dialogTexts.Add(new DialogData("/emote:Normal//speed:down/Esta historia continurá.", "Kidmand"));
         dialogTexts.Add(new DialogData("/emote:Normal/Muchas gracias al equipo de TeamBrunomir por darme esta oportunidad. Les mando un enorme saludo.", "Dante"));
+        dialogTexts.Add(new DialogData("/emote:Normal/Presiona la letra (Q) para salir del juego.", "Dante"));
 
         DialogManager.Show(dialogTexts);
 
         StartCoroutine(WaitAndChangeScene.WaitDialog(DialogManager, ChangeSceneScript));
+    }
+
+        private void Update()
+    {
+        // Salir del juego al presionar la tecla Q.
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Application.Quit();
+        }
     }
 }
 
