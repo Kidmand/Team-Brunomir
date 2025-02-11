@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterScript : MonoBehaviour
 {
     public float Speed, JumpForce, LargeRaycast;
+    public bool CanMove = false; // Variable para controlar si el monstruo puede moverse
     private Rigidbody2D Rigidbody2D;
     private Animator Animator;
     private float eje_x;
@@ -18,15 +19,21 @@ public class MonsterScript : MonoBehaviour
 
     private void Update()
     {
-        HandleMovementInput();
-        HandleJumpInput();
-        UpdateAnimator();
-        CheckGroundStatus();
+        if (CanMove)
+        {
+            HandleMovementInput();
+            HandleJumpInput();
+            UpdateAnimator();
+            CheckGroundStatus();
+        }
     }
 
     private void FixedUpdate()
     {
-        Move();
+        if (CanMove)
+        {
+            Move();
+        }
     }
 
     // Obtener la entrada del jugador para mover al monstruo.
@@ -82,9 +89,3 @@ public class MonsterScript : MonoBehaviour
         Rigidbody2D.velocity = new Vector2(eje_x * Speed, Rigidbody2D.velocity.y);
     }
 }
-
-/*
-    En la función UpdateScale, la parte donde usamos la asiganción de Vector3 para la escala del monstruo,
-    es mucho más prolijo declarar una variable que tenga el valor de transform.localScale.x en lugar de 
-    poner el valor numérico directamente, pero esto último me daba un error en la animación. 
-*/

@@ -252,7 +252,7 @@ Transform:
   m_GameObject: {fileID: 128524813}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 566, y: 352.4, z: -0}
+  m_LocalPosition: {x: 553.9, y: 353.7, z: -0}
   m_LocalScale: {x: 62.37904, y: 49.04097, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -658,6 +658,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogManager: {fileID: 1070213720}
+  ChangeSceneScript: {fileID: 670657905}
+  MonsterScript: {fileID: 1869738553}
+  KidAnimator: {fileID: 128524814}
 --- !u!4 &670027411
 Transform:
   m_ObjectHideFlags: 0
@@ -668,6 +671,53 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &670657904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 670657906}
+  - component: {fileID: 670657905}
+  m_Layer: 0
+  m_Name: ChangeScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &670657905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670657904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3037f14b00e203565889b03ce7618993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexScene: 8
+  keyCode: 32
+  changeScene: 0
+--- !u!4 &670657906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670657904}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 587.99023, y: 160.93259, z: -207.54865}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3544,6 +3594,7 @@ MonoBehaviour:
   Speed: 140
   JumpForce: 9000
   LargeRaycast: 20
+  CanMove: 0
 --- !u!1001 &2081353762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3775,3 +3826,4 @@ SceneRoots:
   - {fileID: 295438144}
   - {fileID: 1070213719}
   - {fileID: 670027411}
+  - {fileID: 670657906}

@@ -27,13 +27,13 @@ public class EighthSceneScript : MonoBehaviour
         dialogTexts.Add(new DialogData("/emote:Pensativa/Si, sabes que yo pienso lo mismo que tu. ¿Te animarías a entrar conmigo?", "Dafne"));
         dialogTexts.Add(new DialogData("/emote:Sorpresa/¿Pero qué estás diciendo, estás loca?.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/Piénsalo, ¿Qué podría pasar?.", "Dafne"));
-        dialogTexts.Add(new DialogData("/emote:Normal/Mmmmmmm, /wait:0.1//emote:Happy/Está bien, entremos.", "Dante"));
+        dialogTexts.Add(new DialogData("/emote:Normal/Mmmmmmm. /wait:0.1//emote:Happy/Está bien, entremos.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal//speed:down/Esta historia continurá.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/Muchas gracias al equipo de TeamBrunomir por darme esta oportunidad. Les mando un enorme saludo.", "Dante"));
 
         DialogManager.Show(dialogTexts);
 
-        StartCoroutine(SceneChanger.WaitAndChangeScene(DialogManager, ChangeSceneScript));
+        StartCoroutine(WaitAndChangeScene.WaitDialog(DialogManager, ChangeSceneScript));
     }
 }
 

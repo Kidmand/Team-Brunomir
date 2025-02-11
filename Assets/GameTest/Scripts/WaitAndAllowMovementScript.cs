@@ -2,9 +2,9 @@ using System.Collections;
 using UnityEngine;
 using Doublsb.Dialog;
 
-public static class WaitAndChangeScene
+public static class WaitAndAllowMovement
 {
-    public static IEnumerator WaitDialog(DialogManager dialogManager, ChangeScene changeScenaScript)
+    public static IEnumerator WaitDialog(DialogManager dialogManager, MonsterScript monsterScript, bool CanMove)
     {
         // Esperar a que todos los diálogos terminen.
         while (dialogManager.state != State.Deactivate)
@@ -12,7 +12,7 @@ public static class WaitAndChangeScene
             yield return null;
         }
 
-        // Activar el cambio de escena.
-        changeScenaScript.changeScene = true;
+        // Activar el movimiento del monstruo.
+        monsterScript.CanMove = CanMove;
     }
 }

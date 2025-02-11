@@ -33,14 +33,14 @@ public class SecondSceneScript : MonoBehaviour
         {
             dialogTexts.Add(new DialogData("/emote:Happy/¡Gracias por la idea! /wait:0.1//emote:Normal/Me iré al parque a disfrutar de la naturaleza.", "Dante"));
             DialogManager.Show(dialogTexts);
-            StartCoroutine(SceneChanger.WaitAndChangeScene(DialogManager, ChangeSceneScript));
+            StartCoroutine(WaitAndChangeScene.WaitDialog(DialogManager, ChangeSceneScript));
             
         }
         else if (DialogManager.Result == "Juego")
         {
             dialogTexts.Add(new DialogData("/emote:Happy/¡Gracias por la idea! /wait:0.1//emote:Normal/Me quedaré en mi cuarto a disfrutar de los videojuegos.", "Dante"));
             DialogManager.Show(dialogTexts);
-            StartCoroutine(SceneChanger.WaitAndChangeScene(DialogManager, ChangeSceneScript2));
+            StartCoroutine(WaitAndChangeScene.WaitDialog(DialogManager, ChangeSceneScript2));
         }
     }
 }

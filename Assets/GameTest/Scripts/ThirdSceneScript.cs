@@ -32,6 +32,6 @@ public class ThirdSceneScript : MonoBehaviour
 
         DialogManager.Show(dialogTexts);
 
-        StartCoroutine(SceneChanger.WaitAndChangeScene(DialogManager, ChangeSceneScript));
+        StartCoroutine(WaitAndChangeScene.WaitDialog(DialogManager, ChangeSceneScript));
     }
 }

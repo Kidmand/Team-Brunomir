@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class KidScript : MonoBehaviour
@@ -34,9 +35,9 @@ public class KidScript : MonoBehaviour
     {   
         if (!Animator.GetBool("KidDead") && !IsDead)
         {
-            if (direction.x >= 200)
+            if (direction.x >= 200 || direction.x <= 0 )
                 transform.localScale = new Vector3(62.3790398f, 49.0409698f, 1f);
-            else
+            else if (direction.x < 200 || direction.x > 0)
                 transform.localScale = new Vector3(-62.3790398f, 49.0409698f, 1f);
         }
     }
@@ -45,12 +46,12 @@ public class KidScript : MonoBehaviour
     // siga mirando al monstruo cuando ya está muerto.
     private void CheckIfDead(Vector3 direction)
     {
-        if (direction.x <= 30f)
+        if (Mathf.Abs(direction.x) <= 30f && Input.GetKeyDown(KeyCode.F))
         {
             Animator.SetBool("KidDead", true);
             IsDead = true;
         }
-        else
+        else if (Mathf.Abs(direction.x) > 30f && Input.GetKeyDown(KeyCode.F))
         {
             Animator.SetBool("KidDead", false);
         }

@@ -14,7 +14,7 @@ public class FirstSceneScript : MonoBehaviour
         AddInitialDialogues(dialogTexts);
         AddSelectionDialogues(dialogTexts);
         DialogManager.Show(dialogTexts);
-        StartCoroutine(SceneChanger.WaitAndChangeScene(DialogManager, ChangeSceneScript));
+        StartCoroutine(WaitAndChangeScene.WaitDialog(DialogManager, ChangeSceneScript));
     }
 
     // Diálogos entre los personajes Dante y Kidmand en el living de la residencia/pensión.
