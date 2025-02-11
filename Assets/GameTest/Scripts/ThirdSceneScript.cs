@@ -12,7 +12,7 @@ public class ThirdSceneScript : MonoBehaviour
     {
         var dialogTexts = new List<DialogData>();
 
-        //Diálogos de los personajes Dafne y Dante en el parque.  
+        // Diálogos de los personajes Dafne y Dante en el parque.  
         dialogTexts.Add(new DialogData("/size:down//emote:Happy/¡Que hermosa la vista! /wait:0.1//emote:Normal/Al final fue bueno venir a despejarme al parque. Ahora que lo pienso, podría haber invitado a kidmand, me cayó de maravilla.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/En fin, voy a sentarme y disfurtar del clima y la vista.", "Kidmand"));
         dialogTexts.Add(new DialogData("/emote:Normal/!Uyy, pero que tiempo tan hermoso hace hoy! /wait:0.1//emote:Pensativa/Mmmmmm, ¿Quién será aquel chico recostado sobre el banco?.", "Dafne"));

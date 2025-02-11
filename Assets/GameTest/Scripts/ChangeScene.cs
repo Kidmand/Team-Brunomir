@@ -27,7 +27,3 @@ public class ChangeScene : MonoBehaviour
         }
     }
 }
-
-// Lo que está entre /*---*/ puede representar una mejora en el juego quizá al automatizar el cambio de escena.
-// De igual manera tuve problemas para implementar el cambio de escena en el juego de manera automatizada y dado
-// que no dispongo de mucho tiempo, decidí hacerlo de esta manera. 

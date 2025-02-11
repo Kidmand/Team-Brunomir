@@ -5,7 +5,7 @@ using UnityEngine;
 public class MonsterScript : MonoBehaviour
 {
     public float Speed, JumpForce, LargeRaycast;
-    public bool CanMove = false; // Variable para controlar si el monstruo puede moverse
+    public bool CanMove = false; // Variable para controlar si el monstruo puede moverse.
     private Rigidbody2D Rigidbody2D;
     private Animator Animator;
     private float eje_x;

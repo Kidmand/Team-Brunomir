@@ -13,7 +13,7 @@ public class EighthSceneScript : MonoBehaviour
     {
         var dialogTexts = new List<DialogData>();
 
-        //Continuación de los diálogos entre los personajes Dafne y Dante en la casa de la familia.  
+        // Continuación de los diálogos entre los personajes Dafne y Dante en la casa de la familia.  
         dialogTexts.Add(new DialogData("/emote:Pensativa/¿Por qué sospechan eso?.", "Dafne"));
         dialogTexts.Add(new DialogData("/emote:Normal/Muchos creen haberlo visto poco tiempo después de haber viajado a Egipto.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/Luego de lo sucedido, y que el esposo supuestamente habría llegado después de la muerte de su hijo, la familia desapareció sin dejar el más mínimo rastro." , "Dante"));

@@ -12,7 +12,7 @@ public class FifthSceneScript : MonoBehaviour
     {
         var dialogTexts = new List<DialogData>();
 
-        //Diálogos de los personajes Dafne y Dante en el Bosque.  
+        // Diálogos de los personajes Dafne y Dante en el Bosque.  
         dialogTexts.Add(new DialogData("/emote:Normal/Por cierto, ¿De dónde eres?.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/No soy de por aquí, de hecho hace poco que vine a la ciudad por lo que no conozco mucho. Además, me gusta explorar nuevos lugares y principalmente quería venir a este bosque.", "Dafne"));
         dialogTexts.Add(new DialogData("/emote:Happy/Bueno, hice bien en traerte entonces." , "Dante"));

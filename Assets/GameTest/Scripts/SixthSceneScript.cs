@@ -12,7 +12,7 @@ public class SixthSceneScript : MonoBehaviour
     {
         var dialogTexts = new List<DialogData>();
 
-        //Continuación de los diálogos entre los personajes Dafne y Dante en el Bosque.  
+        // Continuación de los diálogos entre los personajes Dafne y Dante en el Bosque.  
         dialogTexts.Add(new DialogData("/size:down//emote:Normal/Resulta que el hombre debía irse con urgencia a un lugar de Egipto a buscar un artilugio. Esto se sabe porque un residente de la ciudad lo esuchó mientras hablaba con uno de sus amigos o socios trajeados.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/También se sabe que el esposo le pidió al otro hombre que fuere lo que fuere no dejara a sus hijos desprotegidos.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Pensativa/¿Hay algo raro en esto, por qué solo los niños? ¿Qué hay de la esposa?." , "Dafne"));

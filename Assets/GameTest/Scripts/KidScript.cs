@@ -43,7 +43,7 @@ public class KidScript : MonoBehaviour
     }
 
     // Verificar si el niño está muerto. La variable IsDead se utiliza para evitar que el niño
-    // siga mirando al monstruo cuando ya está muerto.
+    // siga girando su posición al monstruo cuando ya está muerto.
     private void CheckIfDead(Vector3 direction)
     {
         if (Mathf.Abs(direction.x) <= 30f && Input.GetKeyDown(KeyCode.F))
@@ -60,6 +60,6 @@ public class KidScript : MonoBehaviour
 
 /*
     En la función UpdateScale, la parte donde usamos la asiganción de Vector3 para la escala del niño,
-    es mucho más prolijo declarar una variable que tenga el valor de transform.localScale.x en lugar de 
+    es mucho más prolijo y generaliza el código, declarar una variable que tenga el valor de transform.localScale.x en lugar de 
     poner el valor numérico directamente, pero esto último me daba un error en la animación. 
 */

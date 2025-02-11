@@ -14,7 +14,7 @@ public class SecondSceneScript : MonoBehaviour
 
         dialogTexts.Add(new DialogData("/size:down/Bueno, ahora estamos en mi cuarto y quiero relajarme pero no se que hacer. Voy a pensar en algunas opciones.", "Dante"));
 
-        // Añadir opciones de selección. 
+        // Opciones de selección. 
         var selectionText = new DialogData("Creo que estoy entre dos cosas que me harían relajarme bastante.", "Dante");
         selectionText.SelectList.Add("Naturaleza", "Tengo ganas de sentir aire fresco, quizá pueda ir al parque.");
         selectionText.SelectList.Add("Juego", "Tengo muchas ganas de jugar videojuegos, ya que estoy en mi cuarto.");
@@ -25,6 +25,7 @@ public class SecondSceneScript : MonoBehaviour
 
     }
 
+    // Cambio de escena dependiendo de la selección del jugador.
     private void HandleSelection()
     {
         var dialogTexts = new List<DialogData>();
