@@ -10,11 +10,14 @@ public class MonsterScript : MonoBehaviour
     private Animator Animator;
     private float eje_x;
     private bool Grounded;
+    private float localScaleX, localScaleY;
 
     private void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
+        localScaleX = transform.localScale.x;
+        localScaleY = transform.localScale.y;
     }
 
     private void Update()
@@ -63,11 +66,11 @@ public class MonsterScript : MonoBehaviour
     {
         if (eje_x < 0.0f)
         {
-            transform.localScale = new Vector3(-28.6665f, 25.7613f, 1.0f);
+            transform.localScale = new Vector3(-localScaleX, localScaleY, 1.0f);
         }
         else if (eje_x > 0.0f)
         {
-            transform.localScale = new Vector3(28.6665f, 25.7613f, 1.0f);
+            transform.localScale = new Vector3(localScaleX, localScaleY, 1.0f);
         }
     }
 

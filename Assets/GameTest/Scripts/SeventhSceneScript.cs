@@ -12,7 +12,7 @@ public class SeventhSceneScript : MonoBehaviour
     {
         var dialogTexts = new List<DialogData>();
 
-        //Continuación de los diálogos entre los personajes Dafne y Dante en el Bosque.  
+        // Continuación de los diálogos entre los personajes Dafne y Dante en el Bosque.  
         dialogTexts.Add(new DialogData("/emote:Normal/Si, a mi realmente me parece impresionante esto lo de las huellas. Es lo que más me inquieta de toda la historia.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/Después de lo sucedido, los días pasaban pero todo el mundo estaba pendiente que ocurrieran más cosas, por alguna extraña razon, se sentía en el ambiente.", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Pensativa/¿Qué se sentía en el ambiente?." , "Dafne"));

@@ -8,10 +8,15 @@ public class KidScript : MonoBehaviour
     public GameObject Monster;
     private Animator Animator;
     private bool IsDead = false;
+    private float localScaleX, localScaleY;
+    public float DeadKid = 50;
+
 
     private void Start()
     {
         Animator = GetComponent<Animator>();
+        localScaleX = transform.localScale.x;
+        localScaleY = transform.localScale.y;
     }
 
     private void Update()
@@ -27,7 +32,7 @@ public class KidScript : MonoBehaviour
         return transform.position - Monster.transform.position;
     }
 
-    // Actualiza la escala del niño dependiendo de la dirección en la que se encuentre el mostruo.
+    // Actualiza la escala del niño dependiendo de la dirección en la que se encuentre el monstruo.
     // Esto sirve para que el niño mire hacia el monstruo cuando este esté a una determinada distancia.
     // Cuando el monstruo mata al niño, se desactiva esta opción.
     // La variable KidDead se utiliza para activar la animación de muerte del niño. Es decir, cambiar de estado.
@@ -35,10 +40,10 @@ public class KidScript : MonoBehaviour
     {   
         if (!Animator.GetBool("KidDead") && !IsDead)
         {
-            if (direction.x >= 200 || direction.x <= 0 )
-                transform.localScale = new Vector3(62.3790398f, 49.0409698f, 1f);
-            else if (direction.x < 200 || direction.x > 0)
-                transform.localScale = new Vector3(-62.3790398f, 49.0409698f, 1f);
+            if (direction.x >= 200 || direction.x <= 0)
+                transform.localScale = new Vector3(localScaleX, localScaleY, 1f);
+            else if (direction.x < 200 && direction.x > 0)
+                transform.localScale = new Vector3(-localScaleX, localScaleY, 1f);
         }
     }
 
@@ -46,20 +51,14 @@ public class KidScript : MonoBehaviour
     // siga girando su posición al monstruo cuando ya está muerto.
     private void CheckIfDead(Vector3 direction)
     {
-        if (Mathf.Abs(direction.x) <= 30f && Input.GetKeyDown(KeyCode.F))
+        if (Mathf.Abs(direction.x) <=  DeadKid && Input.GetKeyDown(KeyCode.F))
         {
             Animator.SetBool("KidDead", true);
             IsDead = true;
         }
-        else if (Mathf.Abs(direction.x) > 30f && Input.GetKeyDown(KeyCode.F))
+        else if (Mathf.Abs(direction.x) >  DeadKid && Input.GetKeyDown(KeyCode.F))
         {
             Animator.SetBool("KidDead", false);
         }
     }
 }
-
-/*
-    En la función UpdateScale, la parte donde usamos la asiganción de Vector3 para la escala del niño,
-    es mucho más prolijo y generaliza el código, declarar una variable que tenga el valor de transform.localScale.x en lugar de 
-    poner el valor numérico directamente, pero esto último me daba un error en la animación. 
-*/
