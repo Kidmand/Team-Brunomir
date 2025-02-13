@@ -9,7 +9,8 @@ public class KidScript : MonoBehaviour
     private Animator Animator;
     private bool IsDead = false;
     private float localScaleX, localScaleY;
-    public float DeadKid = 50;
+    private const float DeadKid = 50;
+    private const float ScaleThreshold = 200;
 
 
     private void Start()
@@ -40,9 +41,9 @@ public class KidScript : MonoBehaviour
     {   
         if (!Animator.GetBool("KidDead") && !IsDead)
         {
-            if (direction.x >= 200 || direction.x <= 0)
+            if (direction.x >= ScaleThreshold || direction.x <= 0)
                 transform.localScale = new Vector3(localScaleX, localScaleY, 1f);
-            else if (direction.x < 200 && direction.x > 0)
+            else if (direction.x < ScaleThreshold && direction.x > 0)
                 transform.localScale = new Vector3(-localScaleX, localScaleY, 1f);
         }
     }
