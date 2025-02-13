@@ -24,7 +24,7 @@ public class FourthSceneScript : MonoBehaviour
         dialogTexts.Add(new DialogData("/emote:Normal/Creo haberlo jugado algunas veces hace como 10 años, lo recuerdo porque en ese entonces me parecía muy sangriento. ", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/También porque, en aquel entonces el juego se cerró por si mismo y desde ahí nunca volvió a funcionar...", "Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/Para jugar era la tecla (A y D) para moverse, tecla (W) para saltar y tecla (F) para matar si no mal recuerdo.", "Dante"));
-        dialogTexts.Add(new DialogData("/emote:Normal/¿Por qué el niño le está tirando piedra a ese ciervo? ¿Y si lo matamos?","Dante"));
+        dialogTexts.Add(new DialogData("/emote:Normal/¿Parece haber una pelea entre el mago y el niño? ¿Y si los matamos?","Dante"));
         dialogTexts.Add(new DialogData("/emote:Normal/Algo que me sorprende de este juego es que siempre hay escena distintas, pareciera no tener niveles.","Dante"));
 
         DialogManager.Show(dialogTexts);
