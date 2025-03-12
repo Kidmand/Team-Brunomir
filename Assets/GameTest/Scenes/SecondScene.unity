@@ -2767,7 +2767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexScene: 3
-  keyCode: 113
+  keyCode: 0
   changeScene: 0
 --- !u!4 &2106722969
 Transform:
